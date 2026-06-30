@@ -94,7 +94,9 @@ public class DataSeeder implements CommandLineRunner {
 
             appointment.setProvider(appointmentData.getProvider());
             appointment.setDatetime(
-                    LocalDateTime.parse(appointmentData.getDatetime()));
+                    OffsetDateTime.parse(appointmentData.getDatetime())
+                            .toLocalDateTime()
+            );
             appointment.setRepeat(appointmentData.getRepeat());
 
             // JSON doesn't contain this field
