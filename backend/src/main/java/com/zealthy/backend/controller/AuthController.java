@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"http://localhost:5173","https://zealthy-mini-emr-app.onrender.com"})
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://zealty.netlify.app"
+})
 public class AuthController {
 
     private final AuthService authService;
