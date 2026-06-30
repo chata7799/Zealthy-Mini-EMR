@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/patients")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173","https://zealthy-mini-emr-app.onrender.com"})
 public class PatientController {
 
     private final PatientService patientService;
